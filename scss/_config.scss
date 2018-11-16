@@ -19,3 +19,9 @@ $background-opacity: 0.9;
     background-size: cover;
   }
 }
+
+@keyframes scaryFace {
+  0% {
+    background: url(/img/maxresdefault.png);
+  }
+}
