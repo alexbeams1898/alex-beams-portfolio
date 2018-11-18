@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: $primary-color;
     @include easeOut;
   }
 
@@ -24,6 +24,7 @@
       // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
+        background: #000;
       }
       // Line 2 - Hide
       &:nth-child(2) {
@@ -32,6 +33,7 @@
       // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+        background: #000;
       }
     }
   }
@@ -42,7 +44,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  // opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -69,10 +71,6 @@
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
-    img {
-      height: 3em;
-    }
-
     &.show {
       //Slide in from bottom
       transform: translate3d(0, 0, 0);
@@ -91,6 +89,22 @@
     }
   }
 
+  // Portrait
+  .portrait {
+    border-radius: 50%;
+    width: 75%;
+    height: auto;
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.move {
+      @include easeOut;
+      transform: translate3d(0, 0, 0);
+      //Add Francis Bacon face over mine
+      //   animation: scaryFace 10s infinite;
+    }
+  }
+
   .nav-item {
     // Drop From Top
     transform: translate3d(-600px, 0, 0);
@@ -99,6 +113,10 @@
     &.show {
       // Slide in from the sky
       transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: #000;
     }
   }
 
@@ -109,6 +127,11 @@
     padding: 1rem 0;
     font-weight: bolder;
     @include easeOut;
+
+    &:hover {
+      @include easeOut;
+      color: #000;
+    }
   }
 }
 

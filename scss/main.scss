@@ -1,7 +1,9 @@
 @import "config";
 @import "menu";
+@import "mobile";
 
 body {
+  @include background;
   background: $primary-color;
   height: 100%;
   margin: 0;
@@ -22,8 +24,9 @@ h3 {
   }
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    padding: 0.3rem 1rem;
     background: rgba(lighten($secondary-color, 2), 1);
+    border-radius: 10px;
   }
 }
 
@@ -33,16 +36,9 @@ a {
 }
 
 header {
-  // position: fixed;
+  position: fixed;
   z-index: 2;
   width: 100%;
-
-  .aaron-pic {
-    position: absolute;
-    height: 8em;
-    width: auto;
-    padding: 10px;
-  }
 }
 
 .text-secondary {
@@ -50,27 +46,11 @@ header {
 }
 
 main {
-  @include background();
   padding: 4rem;
-  height: 100%;
-
-  .portrait {
-    float: right;
-    border-radius: 50%;
-    height: 15em;
-    &.move {
-      @include easeOut;
-      transform: translate3d(-200%, 50%, 0) scale(1.4);
-
-      //Add Francis Bacon face over mine
-      animation: scaryFace 10s infinite;
-    }
-  }
-
   .icons {
     margin-top: 1rem;
     a {
-      color: rgba(lighten($secondary-color, 2), 1);
+      color: rgba(lighten($secondary-color, 0.3), 1);
       padding: 0.4rem;
       &:hover {
         color: $primary-color;
@@ -81,8 +61,6 @@ main {
 
   &#home {
     overflow: hidden;
-    h1 {
-      margin-top: 30vh;
-    }
+    position: relative;
   }
 }
