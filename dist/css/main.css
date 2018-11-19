@@ -51,15 +51,15 @@
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #000;
+    background: rgba(0, 0, 0, 0.9);
     transform: translate3d(0, -100%, 0);
     transition: all 0.75s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu .portrait {
     border-radius: 50%;
-    width: 75%;
-    height: auto;
+    width: 40vw;
+    height: 40vh;
     transform: translate3d(600px, 0, 0);
     transition: all 0.75s ease-out; }
     .menu .portrait.move {
@@ -75,7 +75,7 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 75px;
+    font-size: 6vh;
     padding: 1rem 0;
     font-weight: bolder;
     transition: all 0.75s ease-out; }
@@ -92,6 +92,9 @@
 .nav-item:nth-child(3) {
   transition-delay: 0.3s; }
 
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -99,6 +102,12 @@
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+  .menu-btn.close .btn-line:nth-child(1) {
+    background: #eeecbb; }
+  .menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0; }
+  .menu-btn.close .btn-line:nth-child(3) {
+    background: #eeecbb; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -107,8 +116,17 @@
     ul.menu-nav.show,
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
+    ul.menu-nav .portrait,
+    div.menu-branding .portrait {
+      content: url("/img/small_portrait.jpeg");
+      height: 20vh;
+      width: 30vw; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
   .menu-nav {
-    height: 75vh; } }
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -143,12 +161,13 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem;
+    font-size: 7vw;
     font-family: "Should've Known"; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
+    font-size: 4vw;
     padding: 0.3rem 1rem;
     background: #008c95;
     border-radius: 10px; }

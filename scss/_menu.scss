@@ -79,7 +79,7 @@
 
   //Branding Side
   &-branding {
-    background: #000;
+    background: rgba(#000000, 0.9);
     transform: translate3d(0, -100%, 0);
     @include easeOut;
 
@@ -92,16 +92,14 @@
   // Portrait
   .portrait {
     border-radius: 50%;
-    width: 75%;
-    height: auto;
+    width: 40vw;
+    height: 40vh;
     transform: translate3d(600px, 0, 0);
     @include easeOut;
 
     &.move {
       @include easeOut;
       transform: translate3d(0, 0, 0);
-      //Add Francis Bacon face over mine
-      //   animation: scaryFace 10s infinite;
     }
   }
 
@@ -123,7 +121,7 @@
   .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 75px;
+    font-size: 6vh;
     padding: 1rem 0;
     font-weight: bolder;
     @include easeOut;
@@ -136,7 +134,7 @@
 }
 
 // Delay each nav-item
-@for $x from 1 to 4 {
+@for $x from 1 to 5 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
