@@ -59,7 +59,7 @@
   .menu .portrait {
     border-radius: 50%;
     width: 40vw;
-    height: 40vh;
+    height: 50vh;
     transform: translate3d(600px, 0, 0);
     transition: all 0.75s ease-out; }
     .menu .portrait.move {
@@ -71,7 +71,8 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #000; }
+      color: #000;
+      text-shadow: 0 0; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -95,6 +96,135 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+body {
+  background: #eeecbb;
+  color: #000;
+  height: 100%;
+  margin: 0;
+  font-family: Encient German Gothic;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(/img/creepy-tree.jpeg);
+    background-attachment: fixed;
+    background-size: cover; }
+  body::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  color: #eeecbb; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 7vw;
+    font-family: "Should've Known"; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    width: 90%;
+    margin-bottom: 2rem;
+    font-size: 4vw;
+    padding: 0.2rem 1rem; }
+
+a {
+  color: #00adb9;
+  text-shadow: 1.5px 1.5px 4px #000;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #00adb9; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh + 50px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      color: #00aebb;
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #eeecbb;
+        transition: all 0.75s ease-out; }
+  main#home {
+    overflow: hidden;
+    position: relative; }
+
+.about-info {
+  width: 95%;
+  font-size: 2.5vh;
+  color: #eeecbb;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bio bio bioimage" "worktitle worktitle worktitle" "job1 job1 job1";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    height: 16rem;
+    width: auto;
+    margin: auto; }
+  .about-info .bio {
+    grid-area: bio; }
+    .about-info .bio h3 {
+      background: black;
+      color: #eeecbb;
+      border: 1px solid #edebb8;
+      padding: 10px;
+      font-family: Encient German Gothic;
+      font-size: 3vw;
+      float: left;
+      margin-right: 20px; }
+    .about-info .bio p {
+      font-size: 2.8vw;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  .about-info .work-title {
+    grid-area: worktitle;
+    text-align: center;
+    font-family: "Mortified Drip";
+    font-size: 6vw;
+    letter-spacing: 10px;
+    color: #eeecbb;
+    border-top: 0.7px solid #00adb9;
+    padding: 20px; }
+  .about-info .job {
+    background: black;
+    color: #eeecbb;
+    border: 1px solid #edebb8;
+    padding: 10px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding: 30px; }
+    .about-info .job h3 {
+      font-size: 2.8vw;
+      letter-spacing: 3px;
+      color: #00fbff;
+      text-shadow: 1.5px 1.5px 4px #3c00ff; }
+    .about-info .job h6 {
+      font-size: 1.8vw; }
+    .about-info .job p {
+      font-size: 1.8vw; }
+  .about-info .job-1 {
+    grid-area: job1; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #e4e192;
+  height: 50px; }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -102,6 +232,8 @@
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+    main .sm-heading {
+      width: 100%; }
   .menu-btn.close .btn-line:nth-child(1) {
     background: #eeecbb; }
   .menu-btn.close .btn-line:nth-child(2) {
@@ -126,74 +258,13 @@
     transform: translate3d(100%, 0, 0); }
   .menu-nav {
     height: 75vh;
-    transform: translate3d(-100%, 0, 0); } }
+    transform: translate3d(-100%, 0, 0); }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "worktitle" "job1";
+    grid-template-columns: 1fr; }
+  .bio-image {
+    margin-top: 20px; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; } }
-
-body {
-  background: #eeecbb;
-  height: 100%;
-  margin: 0;
-  font-family: Encient German Gothic;
-  line-height: 1.5; }
-  body#bg-img {
-    background: url(/img/creepy-tree.jpeg);
-    background-attachment: fixed;
-    background-size: cover; }
-  body::after {
-    content: "";
-    background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; }
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400;
-  color: #eeecbb; }
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 7vw;
-    font-family: "Should've Known"; }
-  h1.sm-heading,
-  h2.sm-heading,
-  h3.sm-heading {
-    margin-bottom: 2rem;
-    font-size: 4vw;
-    padding: 0.3rem 1rem;
-    background: #008c95;
-    border-radius: 10px; }
-
-a {
-  color: #00828b;
-  text-decoration: none; }
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%; }
-
-.text-secondary {
-  color: #00828b; }
-
-main {
-  padding: 4rem; }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      color: #00838d;
-      padding: 0.4rem; }
-      main .icons a:hover {
-        color: #eeecbb;
-        transition: all 0.75s ease-out; }
-  main#home {
-    overflow: hidden;
-    position: relative; }

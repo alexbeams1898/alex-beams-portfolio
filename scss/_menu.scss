@@ -93,7 +93,7 @@
   .portrait {
     border-radius: 50%;
     width: 40vw;
-    height: 40vh;
+    height: 50vh;
     transform: translate3d(600px, 0, 0);
     @include easeOut;
 
@@ -115,6 +115,7 @@
 
     &.current > a {
       color: #000;
+      text-shadow: 0 0;
     }
   }
 

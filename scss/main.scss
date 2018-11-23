@@ -1,13 +1,13 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 body {
   @include background;
   background: $primary-color;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: Encient German Gothic;
+  font-family: $gothText;
   line-height: 1.5;
 }
 
@@ -23,16 +23,16 @@ h3 {
     font-family: "Should've Known";
   }
   &.sm-heading {
+    width: 90%;
     margin-bottom: 2rem;
     font-size: 4vw;
-    padding: 0.3rem 1rem;
-    background: rgba(lighten($secondary-color, 2), 1);
-    border-radius: 10px;
+    padding: 0.2rem 1rem;
   }
 }
 
 a {
   color: $secondary-color;
+  text-shadow: 1.5px 1.5px 4px #000;
   text-decoration: none;
 }
 
@@ -48,6 +48,7 @@ header {
 
 main {
   padding: 4rem;
+  min-height: calc(100vh + 50px);
   .icons {
     margin-top: 1rem;
     a {
@@ -65,3 +66,81 @@ main {
     position: relative;
   }
 }
+
+.about-info {
+  width: 95%;
+  font-size: 2.5vh;
+  color: $primary-color;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bio bio bioimage"
+    "worktitle worktitle worktitle"
+    "job1 job1 job1";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    height: 16rem;
+    width: auto;
+    margin: auto;
+  }
+
+  .bio {
+    h3 {
+      @include gothBackground();
+      font-family: $gothText;
+      font-size: 3vw;
+      float: left;
+      margin-right: 20px;
+    }
+    p {
+      font-size: 2.8vw;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+        "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
+    grid-area: bio;
+  }
+
+  .work-title {
+    grid-area: worktitle;
+    text-align: center;
+    font-family: "Mortified Drip";
+    font-size: 6vw;
+    letter-spacing: 10px;
+    color: $primary-color;
+    border-top: 0.7px solid $secondary-color;
+    padding: 20px;
+  }
+
+  .job {
+    @include gothBackground();
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+      Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding: 30px;
+    h3 {
+      font-size: 2.8vw;
+      letter-spacing: 3px;
+      color: hsl(181, 100%, 50%);
+      text-shadow: 1.5px 1.5px 4px #3c00ff;
+    }
+    h6 {
+      font-size: 1.8vw;
+    }
+    p {
+      font-size: 1.8vw;
+    }
+  }
+  .job-1 {
+    grid-area: job1;
+  }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, $amount: 10);
+  height: 50px;
+}
+
+@import "mobile";
