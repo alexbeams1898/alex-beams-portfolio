@@ -44,7 +44,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  // opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -93,7 +92,7 @@
   .portrait {
     border-radius: 50%;
     width: 40vw;
-    height: 50vh;
+    height: auto;
     transform: translate3d(600px, 0, 0);
     @include easeOut;
 
@@ -115,21 +114,22 @@
 
     &.current > a {
       color: #000;
-      text-shadow: 0 0;
+      text-shadow: 1.5px 1.5px 4px rgb(158, 49, 49);
     }
   }
 
   .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 6vh;
+    font-size: 9vmin;
     padding: 1rem 0;
     font-weight: bolder;
     @include easeOut;
 
     &:hover {
-      @include easeOut;
+      @include ease;
       color: #000;
+      text-shadow: 1.5px 1.5px 4px rgb(158, 49, 49);
     }
   }
 }

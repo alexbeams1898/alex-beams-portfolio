@@ -76,6 +76,14 @@
   .bio-image {
     margin-top: 20px;
   }
+
+  .resume {
+    grid-template-areas:
+      "click-directions"
+      "resume";
+    grid-template-columns: 1fr;
+    grid-gap: 7px;
+  }
 }
 
 //Smartphones
