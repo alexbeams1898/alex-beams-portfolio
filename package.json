@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio Website for Alex Beams",
   "main": "index.js",
-  "homepage": "https://alexbeams1898.github.io/alex-beams-portfolio",
+  "homepage": "https://abeamsportfolio.work",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
