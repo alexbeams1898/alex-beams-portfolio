@@ -289,7 +289,7 @@ main {
       transform: translate3d(0, 0, 0); }
     ul.menu-nav .portrait,
     div.menu-branding .portrait {
-      content: url("/img/small_portrait.jpeg");
+      content: url("/dist/img/portrait.jpeg");
       height: 20vh;
       width: 30vw; }
   .menu-branding {
