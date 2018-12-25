@@ -105,7 +105,7 @@ body {
   font-family: Encient German Gothic;
   line-height: 1.5; }
   body#bg-img {
-    background: url(/img/creepy-tree.jpeg);
+    background: url(/dist/img/creepy-tree.jpeg);
     background-attachment: fixed;
     background-size: cover; }
   body::after {
