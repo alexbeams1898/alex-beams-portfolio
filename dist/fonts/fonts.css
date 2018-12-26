@@ -1,12 +1,12 @@
 @font-face {
   font-family: Encient German Gothic;
-  src: url(fonts/Germgoth.ttf);
+  src: url(/Germgoth.ttf);
 }
 @font-face {
   font-family: Mortified Drip;
-  src: url(fonts/MortifiedDrip.ttf);
+  src: url(/MortifiedDrip.ttf);
 }
 @font-face {
   font-family: Shouldve Known;
-  src: url(fonts/shouldveKnownShaded.ttf);
+  src: url(/shouldveKnownShaded.ttf);
 }
