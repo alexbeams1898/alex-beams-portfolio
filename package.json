@@ -11,6 +11,7 @@
   "author": "Alex Beams",
   "license": "MIT",
   "dependencies": {
+    "debug": ">=2.6.9",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.10.0"
   }
